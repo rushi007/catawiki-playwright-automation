@@ -1,0 +1,18 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: catawiki-playwright-automation
+build:
+  artifacts:
+    - image: catawiki-playwright-automation
+      context: .
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: catawiki-playwright-automation
+        chartPath: helm/catawiki-playwright-automation
+        namespace: default
+        valuesFiles:
+          - helm/catawiki-playwright-automation/values.yaml

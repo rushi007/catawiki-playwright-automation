@@ -34,7 +34,7 @@ export default defineConfig({
     viewport: null,
     ignoreHTTPSErrors: true,
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://www.catawiki.com/en',
+    baseURL: process.env.BASE_URL || 'https://www.catawiki.com/en',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

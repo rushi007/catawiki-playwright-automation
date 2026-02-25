@@ -13,7 +13,12 @@
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.3.0",
     "eslint": "^10.0.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "build": "tsc",
+    "docker:build": "docker build -t catawiki-playwright-automation:latest .",
+    "docker:run": "docker run --env BASE_URL=https://www.catawiki.com/en catawiki-playwright-automation:latest"
   }
 }
