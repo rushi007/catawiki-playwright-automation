@@ -93,7 +93,11 @@ npx playwright install
 
 #### Scenarios covered by tests include:
 - Search Flow: Should display correct lot details when navigating from search results
-- Search Flow: Displayed result count should equal actual number of result items
+- Search Flow: Displayed result count should equal actual number of result items 
+
+> **💡 Info:** The 2nd test scenario seems like a bug in the production, which causes this test to fail for all viewports.
+
+
 
 
 #### Running all Tests (By default in headless mode):
@@ -127,3 +131,10 @@ npx playwright show-report
 Then 
 
 `The HTML report is served at http://localhost:9323`
+
+### Future Improvements
+
+- Add API mocking (MockServer)
+- Add visual regression testing
+- Improve retry strategy
+- Add environment-based configs
