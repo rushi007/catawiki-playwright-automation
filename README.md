@@ -1,8 +1,23 @@
 # Catawiki - Playwright UI Automation
 
-Automated end-to-end tests for the Catawiki website using **Playwright** and the **Page Object Model (POM)** in **TypeScript**.
+Automated end-to-end UI tests for the Catawiki website using Playwright + TypeScript, following the Page Object Model (POM) design pattern.
 
-This project demonstrates a real-world Playwright test suite that validates Catawiki search functionality and individual lot pages.
+This project demonstrates scalable UI test architecture, cross-browser execution, mobile testing, reporting, and CI readiness.
+
+------------------------------------
+## 🚀 Tech Stack
+
+Playwright
+
+TypeScript
+
+Page Object Model (POM)
+
+HTML Reporting
+
+Docker support (optional)
+
+CI/CD ready (Jenkins/GitHub Actions compatible)
 
 ------------------------------------
 ## 📁 Repository Structure
@@ -32,10 +47,11 @@ catawiki-playwright-automation/
 ✅ Playwright Test Runner  
 ✅ Page Object Model (POM) architecture  
 ✅ Parallel test execution  
-✅ Strong locator strategies  
+✅ Cross-browser testing (Chromium, Firefox, WebKit) for Desktop & Mobile viewports   
+✅ Clean locator strategies  
 ✅ Dynamic data handling (timers, bids, counts)  
-✅ CI-ready (GitHub Actions / Jenkins)  
-✅ Detailed failure logs & console output
+✅ CI/CD integration    
+✅ Docker & Kubernetes compatible   
 
 ## 🧠 Getting Started
 
@@ -57,28 +73,52 @@ npm install -D playwright typescript ts-node @playwright/test
 
 **Docker** (for running cintainerzed playwright tests)
 
-### 🧪 Testing
-The project includes a comprehensive test suite using Playwright to validate the UI search flow functionality of the Catawiki-Online marketplace.
+## 🔧 Installation
 
-### Supported / Tested Viewports
-- Desktop view - Chrome
-- Desktop view - Firefox
-- Desktop view - webkit
-- Mobile view - Chrome
-- Mobile view - Safari
+#### Clone the repository
+```bash
+git clone https://github.com/rushi007/catawiki-playwright-automation.git
+cd catawiki-playwright-automation
+```
 
-### Scenarios covered by tests include:
+#### Install dependencies
+```bash
+npm install
+```
+
+#### Install Playwright Browsers
+```bash
+npx playwright install
+```
+
+#### Scenarios covered by tests include:
 - Search Flow: Should display correct lot details when navigating from search results
 - Search Flow: Displayed result count should equal actual number of result items
 
 
-### Running the Test Suite:
+#### Running all Tests (By default in headless mode):
 
 ```bash
 npx playwright test
 ```
 
-### Generate report:
+#### Running all tests in headed mode
+```bash
+npx playwright test --headed
+```
+
+#### Run a specfic test file
+```bash
+npx playwright test tests/search.spec.ts
+```
+
+#### Run on a specific browser
+```bash
+npx playwright test --project=chrome
+```
+For more information: Please have a look at the `playwright.config.ts`
+
+#### Generate report:
 
 ```bash
 npx playwright show-report
