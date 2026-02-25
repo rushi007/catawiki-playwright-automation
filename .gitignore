@@ -1,0 +1,28 @@
+# =========================
+# Playwright
+# =========================
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+
+# =========================
+# Logs
+# =========================
+*.log
+
+
+# =========================
+# Environment variables
+# =========================
+.env
