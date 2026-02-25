@@ -17,6 +17,8 @@ HTML Reporting
 
 Docker support (optional)
 
+Kubernetes (optional)
+
 CI/CD ready (Jenkins/GitHub Actions compatible)
 
 ------------------------------------
@@ -71,7 +73,13 @@ brew install node
 npm install -D playwright typescript ts-node @playwright/test
 ```
 
-**Docker** (for running cintainerzed playwright tests)
+### Optional dependencies for running tests in containerized way
+
+**Docker** 
+
+**skaffold** 
+
+**Helm**
 
 ## 🔧 Installation
 
@@ -96,8 +104,6 @@ npx playwright install
 - Search Flow: Displayed result count should equal actual number of result items 
 
 > **💡 Info:** The 2nd test scenario seems like a bug in the production, which causes this test to fail for all viewports.
-
-
 
 
 #### Running all Tests (By default in headless mode):
@@ -131,6 +137,29 @@ npx playwright show-report
 Then 
 
 `The HTML report is served at http://localhost:9323`
+
+### Run containerized tests
+
+#### Install docker
+```bash
+brew install docker
+```
+
+#### 2 ways to start kubernetes
+
+#### via minikube
+```bash
+minikube start
+kubectl config use-context minikube
+```
+
+#### via docker desktop
+- Enable kubernetes in the docker desktop setting
+
+#### Run the skaffold with dev profile to run the tests
+```bash
+skaffold dev
+```
 
 ### Future Improvements
 
