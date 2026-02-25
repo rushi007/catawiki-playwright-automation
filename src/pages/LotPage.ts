@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { LotPageLocators } from "./LotPage.locators"
+import { LotPageLocators } from "../locators/LotPage.locators"
 
 export class LotPage {
   readonly page: Page;

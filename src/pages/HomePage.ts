@@ -2,7 +2,7 @@ import { Locator, Page, expect } from '@playwright/test';
 import SearchStrategy from '../strategies/SearchStrategy';
 import { DesktopSearchStrategy } from '../strategies/DesktopSearchStrategy';
 import { MobileSearchStrategy } from '../strategies/MobileSearchStrategy';
-import { HomePageLocators } from './HomePage.locators';
+import { HomePageLocators } from '../locators/HomePage.locators';
 
 export class HomePage {
   private searchStrategy: SearchStrategy;

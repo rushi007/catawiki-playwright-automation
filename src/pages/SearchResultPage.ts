@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import { SearchResultPageLocators } from "./SearchResultPage.locators";
+import { SearchResultPageLocators } from "../locators/SearchResultPage.locators";
 import { HomePage } from "./HomePage";
 
 export class SearchResultPage {
